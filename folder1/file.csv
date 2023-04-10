@@ -1,0 +1,122 @@
+No,Type,Id,Name,Status,Error Message
+0,CURATION_PIPELINE,12525,tc38055_step9_flowtimeout,Failed,Not Available
+1,CURATION_PIPELINE,12702,tc38055_step10_s3 to s3 different file formats with different modes,Succeeded,Excecution Successful
+2,CURATION_PIPELINE,12515,tc38055_step5_Main pipeline,Succeeded,Excecution Successful
+3,CURATION_PIPELINE,12496,tc38055_step1_All Processors,Succeeded,Excecution Successful
+4,CURATION_PIPELINE,12504,tc38055_step6_ system_variables,Succeeded,Excecution Successful
+5,CURATION_PIPELINE,13016,tc38055_step13_S3 Output File Type,Succeeded,Excecution Successful
+6,CURATION_PIPELINE,13013,tc38055_step14_Ingest using hash partitions,Succeeded,Excecution Successful
+7,CURATION_PIPELINE,12494,tc38055_step2_All DQ Nodes,Succeeded,Excecution Successful
+8,CURATION_PIPELINE,13018,tc38055_step15_Ingest without hash partitions,Succeeded,Excecution Successful
+9,CURATION_PIPELINE,12522,tc38055_step8_data_observability_alerts,Succeeded,Excecution Successful
+10,CURATION_PIPELINE,12747,tc38055_step11_one_to_many,Succeeded,Excecution Successful
+11,CURATION_PIPELINE,12768,tc38055_step12_incremental_load,Succeeded,Excecution Successful
+12,CURATION_PIPELINE,12528,tc38055_step3_DQ Nodes with Processors,Succeeded,Excecution Successful
+13,CURATION_PIPELINE,12570,tc38055_step4_all_nodes,Succeeded,Excecution Successful
+14,CUSTOM_CODE_PIPELINE,12579,tc3_38053_Almaren_Precondition,Succeeded,Excecution Successful
+15,CUSTOM_CODE_PIPELINE,12584,tc4_38053_Almaren_Postcondition,Succeeded,Excecution Successful
+16,CUSTOM_CODE_PIPELINE,12596,tc4_38053_Pyspark_postcondition,Succeeded,Excecution Successful
+17,CUSTOM_CODE_PIPELINE,12594,tc3_38053_Pyspark_Precondition,Succeeded,Excecution Successful
+18,DATAFLOWS,391,tc_38263_step8_ new or modified_1,Completed,Excecution Successful
+19,DATAFLOWS,294,tc_38263_step7_ access,Completed,Excecution Successful
+20,DATAFLOWS,398,tc_38263_step14_recurring,Completed,Excecution Successful
+21,DATAFLOWS,388,tc_38263_step11_two_as_no_of_parallel_tasks,Completed,Excecution Successful
+22,DATAFLOWS,316,tc_38263_step15_new or modified_1,Completed,Excecution Successful
+23,DATAFLOWS,412,tc_38263_step4_all parallel tasks,Completed,Excecution Successful
+24,DATAFLOWS,384,tc_38263_step3_all pipelines_1,Completed,Excecution Successful
+25,DATAFLOWS,376,tc_38263_step9_pre and postcondidtions,Completed,Excecution Successful
+26,DATAFLOWS,373,tc_38263_step2_all crawler nodes,Completed,Excecution Successful
+27,DATAFLOWS,381,tc_38263_step6_processors,Completed,Excecution Successful
+28,DATAFLOWS,401,tc_38263_step12_Multiple_tasks_1,Completed,Excecution Successful
+29,DATAFLOWS,374,tc_38263_step5_timeout,Failed,Task failed due to Dataflow timeout
+30,DATAFLOWS,395,tc_38263_step16_deleting the tasks,Task(s) Failed,flow has interrupted
+31,DATAFLOWS,377,tc_38263_step1_Different input task status_positive,Task(s) Failed,"Exception:
+	Unable to get Status of the CrawlerTask API for the TaskName: pg wrong creds"
+32,DATAFLOWS,103,tc_38263_step13_inactive check,Task(s) Failed,"Exception:
+	While running Workspace Curation API: Resource is not active."
+33,DATAFLOWS,363,tc_38263_step1_Different input task status_negative,Task(s) Failed,flow has errored
+34,DATA_CONNECTION,2823,tc38248_37_Oracle_JDBC,Failed,"java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:662)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:560)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.modak.spiderweb.crawlers.OracleCrawler.initSourceConnection(OracleCrawler.java:64)
+	at com.modak.spiderweb.BaseCrawler.run(BaseCrawler.java:269)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:470)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:506)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:595)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:230)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1452)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:496)
+	... 10 more
+Caused by: java.net.UnknownHostException: oracle-database.ceammzss12zw.us-east-2.rds.amazonaws.com: Name or service not known
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:815)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1282)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1140)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1064)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:120)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:159)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:428)
+	... 15 more
+"
+35,DATA_CONNECTION,8341,tc38248_26_MongoDB,Succeeded,Excecution Successful
+36,DATA_CONNECTION,2182,tc38248_3_SQLServer,Succeeded,Excecution Successful
+37,DATA_CONNECTION,8449,tc38248_40_Inclusive_Like,Succeeded,Excecution Successful
+38,DATA_CONNECTION,8324,tc38248_17_GCS,Succeeded,Excecution Successful
+39,DATA_CONNECTION,8331,tc38248_14_ADLS Gen2,Succeeded,Excecution Successful
+40,DATA_CONNECTION,8335,tc38248_22_SMB,Succeeded,Excecution Successful
+41,DATA_CONNECTION,663,tc38248_11_Athena,Succeeded,Excecution Successful
+42,DATA_CONNECTION,8344,tc38248_6_DB2,Succeeded,Excecution Successful
+43,DATA_CONNECTION,8145,tc38248_21_fileSystem,Succeeded,Excecution Successful
+44,DATA_CONNECTION,8429,tc38248_31_PostgreSQL_JDBC,Succeeded,Excecution Successful
+45,DATA_CONNECTION,8333,tc38248_24_FTP,Succeeded,Excecution Successful
+46,DATA_CONNECTION,442,tc38248_19_Redshift_relational,Succeeded,Excecution Successful
+47,DATA_CONNECTION,8439,tc38248_39_Exclusive_Regex,Succeeded,Excecution Successful
+48,DATA_CONNECTION,8334,tc38248_23_SFTP,Succeeded,Excecution Successful
+49,DATA_CONNECTION,8317,tc38248_9_AmazonS3,Succeeded,Excecution Successful
+50,DATA_CONNECTION,8336,tc38248_27_HTTP,Succeeded,Excecution Successful
+51,DATA_CONNECTION,8447,tc38248_43_Where_Not_In,Succeeded,Excecution Successful
+52,DATA_CONNECTION,3483,tc38248_16_Synapse,Succeeded,Excecution Successful
+53,DATA_CONNECTION,8444,tc38248_42_Where_IN,Succeeded,Excecution Successful
+54,DATA_CONNECTION,8394,tc38248_10_AWS Glue,Succeeded,Excecution Successful
+55,DATA_CONNECTION,8450,tc38248_44_Postgres_PostConditions,Succeeded,Excecution Successful
+56,DATA_CONNECTION,4309,tc38248_25_FTPS,Succeeded,Excecution Successful
+57,DATA_CONNECTION,8307,tc38248_29_Salesforce,Succeeded,Excecution Successful
+58,DATA_CONNECTION,8415,tc38248_35_Teradata_JDBC,Succeeded,Excecution Successful
+59,DATA_CONNECTION,822,tc38248_30_SharePoint_Subsite,Succeeded,Excecution Successful
+60,DATA_CONNECTION,8430,tc38248_32_MySQL_JDBC,Succeeded,Excecution Successful
+61,DATA_CONNECTION,8345,tc38248_7_Teradata,Succeeded,Excecution Successful
+62,DATA_CONNECTION,8443,tc38248_41_Exclusive_Like,Succeeded,Excecution Successful
+63,DATA_CONNECTION,115,tc38248_5_Hive,Succeeded,Excecution Successful
+64,DATA_CONNECTION,477,tc38248_4_Oracle,Succeeded,Excecution Successful
+65,DATA_CONNECTION,3627,tc38248_12_Redshift,Succeeded,Excecution Successful
+66,DATA_CONNECTION,8412,tc38248_33_SQLServer_JDBC,Succeeded,Excecution Successful
+67,DATA_CONNECTION,8136,tc38248_2_MySQL,Succeeded,Excecution Successful
+68,DATA_CONNECTION,8493,tc38248_15_Azure_Blob,Succeeded,Excecution Successful
+69,DATA_CONNECTION,8410,tc38248_36_MongoDB_JDBC,Succeeded,Excecution Successful
+70,DATA_CONNECTION,8435,tc38248_38_Inclusive_Regex,Succeeded,Excecution Successful
+71,DATA_CONNECTION,8413,tc38248_34_DB2_JDBC,Succeeded,Excecution Successful
+72,DATA_CONNECTION,8346,tc38248_18_BigQuery,Succeeded,Excecution Successful
+73,DATA_CONNECTION,8458,tc38248_45_Oracle_PostConditions,Succeeded,Excecution Successful
+74,DATA_CONNECTION,59,tc38248_1_PostgreSQL,Succeeded,Excecution Successful
+75,DATA_CONNECTION,4314,tc38248_8_Saphana,Succeeded,Excecution Successful
+76,DATA_DOMAIN_PROFILING,2000,tc38253_step11_amazon_s3,Succeeded,Excecution Successful
+77,DATA_DOMAIN_PROFILING,1999,tc38253_step10_gen2,Succeeded,Excecution Successful
+78,DATA_DOMAIN_PROFILING,2001,tc38253_step3_oracle,Succeeded,Excecution Successful
+79,DATA_DOMAIN_PROFILING,1997,tc38253_step1_postgresql,Succeeded,Excecution Successful
+80,DATA_DOMAIN_PROFILING,1996,tc38253_step5_bigquery,Succeeded,Excecution Successful
+81,DATA_DOMAIN_PROFILING,2028,tc38253_step8_synapse,Succeeded,Excecution Successful
+82,DATA_DOMAIN_PROFILING,2002,tc38253_step2_mysql,Succeeded,Excecution Successful
+83,DATA_DOMAIN_PROFILING,2027,tc38253_step7_redshift,Succeeded,Excecution Successful
+84,DATA_DOMAIN_PROFILING,2004,tc38253_step9_mongodb,Succeeded,Excecution Successful
+85,DATA_DOMAIN_PROFILING,2026,tc38253_step6_hive,Succeeded,Excecution Successful
+86,DATA_DOMAIN_PROFILING,2003,tc38253_step4_sqlserver,Succeeded,Excecution Successful
